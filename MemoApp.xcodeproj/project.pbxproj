@@ -14,6 +14,7 @@
 		F74D22C524AF773F0014D0F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74D22C424AF773F0014D0F7 /* Assets.xcassets */; };
 		F74D22C824AF773F0014D0F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D22C624AF773F0014D0F7 /* LaunchScreen.storyboard */; };
 		F74D22D024AF79FF0014D0F7 /* MemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D22CF24AF79FF0014D0F7 /* MemoTableViewController.swift */; };
+		F74D22D324AF80EC0014D0F7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D22D224AF80EC0014D0F7 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F74D22C724AF773F0014D0F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F74D22C924AF773F0014D0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F74D22CF24AF79FF0014D0F7 /* MemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewController.swift; sourceTree = "<group>"; };
+		F74D22D224AF80EC0014D0F7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		F74D22B724AF773E0014D0F7 /* MemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				F74D22D124AF80AE0014D0F7 /* Memo */,
 				F74D22B824AF773E0014D0F7 /* AppDelegate.swift */,
 				F74D22BA24AF773E0014D0F7 /* SceneDelegate.swift */,
 				F74D22BE24AF773E0014D0F7 /* Main.storyboard */,
@@ -68,6 +71,14 @@
 				F74D22CF24AF79FF0014D0F7 /* MemoTableViewController.swift */,
 			);
 			path = MemoApp;
+			sourceTree = "<group>";
+		};
+		F74D22D124AF80AE0014D0F7 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				F74D22D224AF80EC0014D0F7 /* Model.swift */,
+			);
+			path = Memo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F74D22D324AF80EC0014D0F7 /* Model.swift in Sources */,
 				F74D22B924AF773E0014D0F7 /* AppDelegate.swift in Sources */,
 				F74D22D024AF79FF0014D0F7 /* MemoTableViewController.swift in Sources */,
 				F74D22BB24AF773E0014D0F7 /* SceneDelegate.swift in Sources */,
