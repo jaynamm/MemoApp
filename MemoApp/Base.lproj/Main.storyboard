@@ -62,7 +62,7 @@
         <!--새 메모-->
         <scene sceneID="C9h-ZG-wHG">
             <objects>
-                <viewController id="3wG-Uu-hKF" customClass="ComposeViewController" sceneMemberID="viewController">
+                <viewController id="3wG-Uu-hKF" customClass="ComposeViewController" customModule="MemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2wy-ar-gKg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,8 +95,15 @@
                                 <action selector="close:" destination="3wG-Uu-hKF" id="2GX-Dg-Dmi"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="e5k-tu-TSi"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="e5k-tu-TSi">
+                            <connections>
+                                <action selector="save:" destination="3wG-Uu-hKF" id="MGq-Vk-QEh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="memoTextView" destination="BQH-Gh-AW8" id="tTU-8K-gxF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yex-N9-WEG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +114,7 @@
             <objects>
                 <navigationController id="pAC-WS-UrI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5Mh-g1-WGW">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

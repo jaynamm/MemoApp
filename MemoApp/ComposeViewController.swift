@@ -1,5 +1,5 @@
 //
-//  ComposedViewController.swift
+//  ComposeViewController.swift
 //  MemoApp
 //
 //  Created by 남정현 on 2020/07/05.
@@ -13,6 +13,22 @@ class ComposeViewController: UIViewController {
     
     @IBAction func close(_ sender: Any) {
         // 닫기 후 별도로 값을 전달하려면 completion 부분을 활용
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBOutlet weak var memoTextView: UITextView!
+    
+    @IBAction func save(_ sender: Any) {
+        
+        guard let memo = memoTextView.text,
+            memo.count > 0 else {
+                alert(messages: "메모를 입력하세요 !")
+            return
+        }
+        
+        let newMemo = Memo(contents: memo)
+        Memo.dummyMemoList.append(newMemo)
+        
         dismiss(animated: true, completion: nil)
     }
     
