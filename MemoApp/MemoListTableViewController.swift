@@ -91,6 +91,14 @@ class MemoListTableViewController: UITableViewController {
         // insertDate 의 값이 옵셔널이기 때문에 string from 은 옵셔널을 지원하지 않기 때문에 string for를 사용한다.
         cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
 
+        if #available(iOS 10.0, *) {
+            // label text color 변경
+            cell.detailTextLabel?.textColor = UIColor(named: "LabelColor")
+        } else {
+            cell.detailTextLabel?.textColor = UIColor.lightGray
+        }
+        
+        
         return cell
     }
 
