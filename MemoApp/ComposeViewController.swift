@@ -10,6 +10,7 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+    var editTarget: Memo?
     
     @IBAction func close(_ sender: Any) {
         // 닫기 후 별도로 값을 전달하려면 completion 부분을 활용
@@ -29,9 +30,17 @@ class ComposeViewController: UIViewController {
 //        let newMemo = Memo(contents: memo)
 //        Memo.dummyMemoList.append(newMemo)
         
-        DataManager.shared.addNewMemo(memo)
+        if let target = editTarget {
+            target.contents = memo
+            DataManager.shared.saveContext()
+            NotificationCenter.default.post(name: ComposeViewController.memoDidChange, object: nil)
+        } else {
+            DataManager.shared.addNewMemo(memo)
+            NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)
+        }
         
-        NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)
+        // 메모를 수정하고 나서 바로 수정이 안되기 때문에 위에 target 을 설정해주면서 같이 설정한다.
+        //NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)
         
         dismiss(animated: true, completion: nil)
     }
@@ -39,6 +48,14 @@ class ComposeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let memo = editTarget {
+            navigationItem.title = "메모 수정"
+            memoTextView.text = memo.contents
+        } else {
+            navigationItem.title = "새 메모"
+            memoTextView.text = ""
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -58,4 +75,5 @@ class ComposeViewController: UIViewController {
 
 extension ComposeViewController {
     static let newMemoDidInsert = Notification.Name(rawValue: "newMemoDidInseret")
+    static let memoDidChange = Notification.Name(rawValue: "memoDidChange")
 }
