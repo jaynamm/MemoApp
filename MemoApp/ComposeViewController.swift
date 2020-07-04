@@ -29,6 +29,8 @@ class ComposeViewController: UIViewController {
         let newMemo = Memo(contents: memo)
         Memo.dummyMemoList.append(newMemo)
         
+        NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -50,4 +52,8 @@ class ComposeViewController: UIViewController {
     }
     */
 
+}
+
+extension ComposeViewController {
+    static let newMemoDidInsert = Notification.Name(rawValue: "newMemoDidInseret")
 }
