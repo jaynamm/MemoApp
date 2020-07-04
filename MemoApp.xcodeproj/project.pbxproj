@@ -15,6 +15,7 @@
 		F74D22C824AF773F0014D0F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D22C624AF773F0014D0F7 /* LaunchScreen.storyboard */; };
 		F74D22D024AF79FF0014D0F7 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D22CF24AF79FF0014D0F7 /* MemoListTableViewController.swift */; };
 		F74D22D324AF80EC0014D0F7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D22D224AF80EC0014D0F7 /* Model.swift */; };
+		F74D22D524B0DCA30014D0F7 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D22D424B0DCA30014D0F7 /* ComposeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F74D22C924AF773F0014D0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F74D22CF24AF79FF0014D0F7 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		F74D22D224AF80EC0014D0F7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F74D22D424B0DCA30014D0F7 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				F74D22C924AF773F0014D0F7 /* Info.plist */,
 				F74D22C124AF773E0014D0F7 /* MemoApp.xcdatamodeld */,
 				F74D22CF24AF79FF0014D0F7 /* MemoListTableViewController.swift */,
+				F74D22D424B0DCA30014D0F7 /* ComposeViewController.swift */,
 			);
 			path = MemoApp;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F74D22D524B0DCA30014D0F7 /* ComposeViewController.swift in Sources */,
 				F74D22D324AF80EC0014D0F7 /* Model.swift in Sources */,
 				F74D22B924AF773E0014D0F7 /* AppDelegate.swift in Sources */,
 				F74D22D024AF79FF0014D0F7 /* MemoListTableViewController.swift in Sources */,
@@ -300,7 +304,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MemoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -320,7 +325,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MemoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
