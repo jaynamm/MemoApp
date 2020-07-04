@@ -17,6 +17,8 @@
 		F74D22D324AF80EC0014D0F7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D22D224AF80EC0014D0F7 /* Model.swift */; };
 		F74D22D524B0DCA30014D0F7 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D22D424B0DCA30014D0F7 /* ComposeViewController.swift */; };
 		F74D22D724B0DEF80014D0F7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D22D624B0DEF80014D0F7 /* UIViewController+Alert.swift */; };
+		F74D22DA24B0E72B0014D0F7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D22D924B0E72B0014D0F7 /* DetailViewController.swift */; };
+		F74D22DD24B0EF810014D0F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D22DC24B0EF810014D0F7 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		F74D22D224AF80EC0014D0F7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F74D22D424B0DCA30014D0F7 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		F74D22D624B0DEF80014D0F7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		F74D22D924B0E72B0014D0F7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F74D22DC24B0EF810014D0F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		F74D22B724AF773E0014D0F7 /* MemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				F74D22DB24B0EF6B0014D0F7 /* Data */,
 				F74D22D124AF80AE0014D0F7 /* Memo */,
 				F74D22B824AF773E0014D0F7 /* AppDelegate.swift */,
 				F74D22BA24AF773E0014D0F7 /* SceneDelegate.swift */,
@@ -75,6 +80,7 @@
 				F74D22CF24AF79FF0014D0F7 /* MemoListTableViewController.swift */,
 				F74D22D424B0DCA30014D0F7 /* ComposeViewController.swift */,
 				F74D22D624B0DEF80014D0F7 /* UIViewController+Alert.swift */,
+				F74D22D924B0E72B0014D0F7 /* DetailViewController.swift */,
 			);
 			path = MemoApp;
 			sourceTree = "<group>";
@@ -85,6 +91,14 @@
 				F74D22D224AF80EC0014D0F7 /* Model.swift */,
 			);
 			path = Memo;
+			sourceTree = "<group>";
+		};
+		F74D22DB24B0EF6B0014D0F7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F74D22DC24B0EF810014D0F7 /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +179,8 @@
 				F74D22BB24AF773E0014D0F7 /* SceneDelegate.swift in Sources */,
 				F74D22C324AF773E0014D0F7 /* MemoApp.xcdatamodeld in Sources */,
 				F74D22D724B0DEF80014D0F7 /* UIViewController+Alert.swift in Sources */,
+				F74D22DD24B0EF810014D0F7 /* DataManager.swift in Sources */,
+				F74D22DA24B0E72B0014D0F7 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

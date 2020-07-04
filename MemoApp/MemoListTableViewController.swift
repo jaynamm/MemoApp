@@ -21,6 +21,10 @@ class MemoListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        DataManager.shared.fetchMemo()
+        tableView.reloadData()
+        
+        // notification으로 변경
 //        tableView.reloadData()
 //        print(#function)
     }
@@ -30,6 +34,17 @@ class MemoListTableViewController: UITableViewController {
     deinit {
         if let token = token {
             NotificationCenter.default.removeObserver(token)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: cell) {
+            
+            if let vc = segue.destination as? DetailViewController {
+                //vc.memo = Memo.dummyMemoList[indexPath]
+                vc.memo = DataManager.shared.memoList[indexPath.row]
+            }
         }
     }
     
@@ -57,7 +72,8 @@ class MemoListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Memo.dummyMemoList.count
+//        return Memo.dummyMemoList.count
+        return DataManager.shared.memoList.count
     }
 
     // 가장 중요한 메소드
@@ -65,9 +81,15 @@ class MemoListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
-        let target = Memo.dummyMemoList[indexPath.row]
+        
+        //let target = Memo.dummyMemoList[indexPath.row]
+        let target = DataManager.shared.memoList[indexPath.row]
+        
         cell.textLabel?.text = target.contents
-        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
+        
+        //cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
+        // insertDate 의 값이 옵셔널이기 때문에 string from 은 옵셔널을 지원하지 않기 때문에 string for를 사용한다.
+        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
 
         return cell
     }
