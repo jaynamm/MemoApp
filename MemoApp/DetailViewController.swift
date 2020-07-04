@@ -23,12 +23,16 @@ class DetailViewController: UIViewController {
       }()
     
     // 공유 기능 구현
-    @IBAction func share(_ sender: Any) {
+    @IBAction func share(_ sender: UIBarButtonItem) {
         
         guard let memo = memo?.contents else { return }
         
         let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
         present(vc, animated: true, completion: nil)
+        
+        if let pc = vc.popoverPresentationController {
+            pc.barButtonItem = sender
+        }
         
     }
     
